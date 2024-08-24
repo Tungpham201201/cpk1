@@ -88,7 +88,7 @@ def prompt_valid_value(content, tag, password=False):
     while True:
         value = Prompt.ask(content, password=password)
         if not value or value.isspace():
-            print(f"[bold red]{tag} Không thể để trống, hãy thử lại.[/bold red]")
+            console.print(f"[bold red]{tag} Không thể để trống, hãy thử lại.[/bold red]")
         else:
             return value
 
