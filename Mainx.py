@@ -59,7 +59,7 @@ def banner(console):
     console.print(f"[bold green]   ♕ Zalo[/bold green]: [bold green]{__GROUP_USERNAME__}[/bold green].")
     console.print(f"[bold green]   ♕ Youtube[/bold green]: [bold green]@{__YOUTUBE__}[/bold green].")
     console.print("[bold yellow]   ==================================================[/bold yellow]")
-    console.print("[bold red]     《 Lưu ý:[/bold red][bold red]: Đăng xuất tài khoản trước khi hack 》", end="\n\n")
+    console.print("[bold red]    《 Lưu ý:[/bold red][bold red]: Đăng xuất tài khoản trước khi hack 》", end="\n\n")
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
