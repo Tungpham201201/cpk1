@@ -15,8 +15,6 @@ from rich.style import Style
 from cpkrst import CPMEwan
 
 __CHANNEL_USERNAME__ = "Roasted2001"
-__GROUP_USERNAME__   = "0983544223"
-__YOUTUBE__ = "roasted_2001"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -55,9 +53,6 @@ def banner(console):
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text)
     console.print("[bold yellow]   ♕ CPKVN[/bold yellow][bold red]: Car Parking 1 Hacking Tool VietNames.[/bold red]")
-    console.print(f"[bold green]   ♕ Telegram[/bold green]: [bold green]@{__CHANNEL_USERNAME__}[/bold green].")
-    console.print(f"[bold green]   ♕ Zalo[/bold green]: [bold green]{__GROUP_USERNAME__}[/bold green].")
-    console.print(f"[bold green]   ♕ Youtube[/bold green]: [bold green]@{__YOUTUBE__}[/bold green].")
     console.print("[bold yellow]   ==================================================[/bold yellow]")
     console.print("[bold red]    《 Lưu ý:[/bold red][bold red]: Đăng xuất tài khoản trước khi hack 》", end="\n\n")
 
@@ -81,7 +76,6 @@ def load_player_data(cpm):
 def load_key_data(cpm):
     data = cpm.get_key_data()
     console.print("[bold yellow]========《 Tất Cả Các Hack 》========[/bold yellow]")
-    console.print("[bold green]Liên Hệ:[/bold green][bold red] https://m.me/thanhtung0701[/bold red]")
     console.print(f"[bold green]Credits:[/bold green] [bold yellow]{ (data.get('coins') if not data.get('is_unlimited') else 'ROASTED_AMONYMOUS') }[/bold yellow].", end="\n\n")
 
 def prompt_valid_value(content, tag, password=False):
