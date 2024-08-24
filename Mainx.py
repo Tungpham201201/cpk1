@@ -41,12 +41,12 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name =  "      ░█████╗░░░░██████╗░░░░██╗░░██╗░░░░░███╗░░\n"
-    brand_name += "      ██╔══██╗░░░██╔══██╗░░░██║░██╔╝░░░░████║░░\n"
-    brand_name += "      ██║░░╚═╝░░░██████╔╝░░░█████═╝░░░░██╔██║░░\n"
-    brand_name += "      ██║░░██╗░░░██╔═══╝░░░░██╔═██╗░░░░╚═╝██║░░\n"
-    brand_name += "      ╚█████╔╝░░░██║░░░░░░░░██║░╚██╗░░░███████╗\n"
-    brand_name += "      ░╚════╝░░░░╚═╝░░░░░░░░╚═╝░░╚═╝░░░╚══════╝\n"
+    brand_name =  "        ░█████╗░░░░██████╗░░░░██╗░░██╗░░░░░███╗░░\n"
+    brand_name += "        ██╔══██╗░░░██╔══██╗░░░██║░██╔╝░░░░████║░░\n"
+    brand_name += "        ██║░░╚═╝░░░██████╔╝░░░█████═╝░░░░██╔██║░░\n"
+    brand_name += "        ██║░░██╗░░░██╔═══╝░░░░██╔═██╗░░░░╚═╝██║░░\n"
+    brand_name += "        ╚█████╔╝░░░██║░░░░░░░░██║░╚██╗░░░███████╗\n"
+    brand_name += "        ░╚════╝░░░░╚═╝░░░░░░░░╚═╝░░╚═╝░░░╚══════╝\n"
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -54,23 +54,23 @@ def banner(console):
     ]
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text)
-    console.print("[bold yellow]♕ CPKVN[/bold yellow][bold red]: Car Parking 1 Hacking Tool VietNames.[/bold red]")
-    console.print(f"[bold green]♕ Telegram[/bold green]: [bold green]@{__CHANNEL_USERNAME__}[/bold green].")
-    console.print(f"[bold green]♕ Zalo[/bold green]: [bold green]{__GROUP_USERNAME__}[/bold green].")
-    console.print(f"[bold green]♕ Youtube[/bold green]: [bold green]@{__YOUTUBE__}[/bold green].")
-    console.print("[bold yellow]==================================================[/bold yellow]")
-    console.print("[bold red]《 Lưu ý:[/bold red][bold red]: Đăng xuất tài khoản trước khi hack", end="\n\n")
+    console.print("[bold yellow]   ♕ CPKVN[/bold yellow][bold red]: Car Parking 1 Hacking Tool VietNames.[/bold red]")
+    console.print(f"[bold green]   ♕ Telegram[/bold green]: [bold green]@{__CHANNEL_USERNAME__}[/bold green].")
+    console.print(f"[bold green]   ♕ Zalo[/bold green]: [bold green]{__GROUP_USERNAME__}[/bold green].")
+    console.print(f"[bold green]   ♕ Youtube[/bold green]: [bold green]@{__YOUTUBE__}[/bold green].")
+    console.print("[bold yellow]   ==================================================[/bold yellow]")
+    console.print("[bold red]   《 Lưu ý:[/bold red][bold red]: Đăng xuất tài khoản trước khi hack", end="\n\n")
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
     if response.get('ok'):
         data = response.get('data')
         if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
-            console.print("[bold yellow]========[ CHI TIẾT TÀI KHOẢN ]========[/bold yellow]")
-            console.print(f"[bold yellow]Name   :[/bold yellow][bold green] { (data.get('Name') if 'Name' in data else 'UNDEFINED') }.[/bold green]")
-            console.print(f"[bold yellow]LocalID:[/bold yellow][bold green] { (data.get('localID') if 'localID' in data else 'UNDEFINED') }.[/bold green]")
-            console.print(f"[bold yellow]Money  :[/bold yellow][bold green] { (data.get('money') if 'money' in data else 'UNDEFINED') }.[/bold green]")
-            console.print(f"[bold yellow]Coins  :[/bold yellow][bold green] { (data.get('coin') if 'coin' in data else 'UNDEFINED') }.[/bold green]", end="\n\n")
+            console.print("[bold yellow]   ========[ CHI TIẾT TÀI KHOẢN ]========[/bold yellow]")
+            console.print(f"[bold yellow]   Name   :[/bold yellow][bold green] { (data.get('Name') if 'Name' in data else 'UNDEFINED') }.[/bold green]")
+            console.print(f"[bold yellow]   LocalID:[/bold yellow][bold green] { (data.get('localID') if 'localID' in data else 'UNDEFINED') }.[/bold green]")
+            console.print(f"[bold yellow]   Money  :[/bold yellow][bold green] { (data.get('money') if 'money' in data else 'UNDEFINED') }.[/bold green]")
+            console.print(f"[bold yellow]   Coins  :[/bold yellow][bold green] { (data.get('coin') if 'coin' in data else 'UNDEFINED') }.[/bold green]", end="\n\n")
         else:
             console.print("[bold red]! ERROR: Tài Khoản Chưa Được Tạo Không thể Đăng Nhập !.[/bold red]")
             exit(1)
@@ -114,10 +114,10 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     while True:
         banner(console)
-        acc_email = prompt_valid_value("[bold yellow] Email tài khoản   : [/bold yellow]", "Email", password=False)
-        acc_password = prompt_valid_value("[bold yellow] Mật khẩu tài khoản: [/bold yellow]", "Password", password=False)
-        acc_access_key = prompt_valid_value("[bold yellow] Key đăng nhập     :[/bold yellow]", "Access Key", password=False)
-        console.print("[bold blue][%] Đang đăng nhập tài khoản[/bold blue]: ", end=None)
+        acc_email = prompt_valid_value("[bold yellow]   Email tài khoản   : [/bold yellow]", "Email", password=False)
+        acc_password = prompt_valid_value("[bold yellow]   Mật khẩu tài khoản: [/bold yellow]", "Password", password=False)
+        acc_access_key = prompt_valid_value("[bold yellow]   Key đăng nhập     :[/bold yellow]", "Access Key", password=False)
+        console.print("[bold blue]   [%] Đang đăng nhập tài khoản[/bold blue]: ", end=None)
         cpm = CPMEwan(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
