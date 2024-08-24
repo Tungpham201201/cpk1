@@ -41,12 +41,12 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name =  "░█████╗░██████╗░██╗░░██╗░░███╗░░\n"
-    brand_name += "██╔══██╗██╔══██╗██║░██╔╝░████║░░\n"
-    brand_name += "██║░░╚═╝██████╔╝█████═╝░██╔██║░░\n"
-    brand_name += "██║░░██╗██╔═══╝░██╔═██╗░╚═╝██║░░\n"
-    brand_name += "╚█████╔╝██║░░░░░██║░╚██╗███████╗\n"
-    brand_name += "░╚════╝░╚═╝░░░░░╚═╝░░╚═╝╚══════╝\n"
+    brand_name =  "░█████╗░░░░██████╗░░░░██╗░░██╗░░░░░███╗░░\n"
+    brand_name += "██╔══██╗░░░██╔══██╗░░░██║░██╔╝░░░░████║░░\n"
+    brand_name += "██║░░╚═╝░░░██████╔╝░░░█████═╝░░░░██╔██║░░\n"
+    brand_name += "██║░░██╗░░░██╔═══╝░░░░██╔═██╗░░░░╚═╝██║░░\n"
+    brand_name += "╚█████╔╝░░░██║░░░░░░░░██║░╚██╗░░░███████╗\n"
+    brand_name += "░╚════╝░░░░╚═╝░░░░░░░░╚═╝░░╚═╝░░░╚══════╝\n"
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -114,9 +114,9 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     while True:
         banner(console)
-        acc_email = prompt_valid_value("[bold yellow] Account Email[/bold yellow]", "Email", password=False)
-        acc_password = prompt_valid_value("[bold yellow] Account Password[/bold yellow]", "Password", password=False)
-        acc_access_key = prompt_valid_value("[bold yellow] Access Key[/bold yellow]", "Access Key", password=False)
+        acc_email = prompt_valid_value("[bold yellow] Account Email[/bold yellow]", "[bold blue]Email[/bold blue]", password=False)
+        acc_password = prompt_valid_value("[bold yellow] Account Password[/bold yellow]", "[bold blue]Password[/bold blue]", password=False)
+        acc_access_key = prompt_valid_value("[bold yellow] Access Key[/bold yellow]", "[bold blue]Access Key[/bold blue]", password=False)
         console.print("[bold blue][%] Trying to Login[/bold blue]: ", end=None)
         cpm = CPMEwan(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
@@ -317,8 +317,8 @@ if __name__ == "__main__":
                 else: continue
             elif service == 9: # Account Register
                 console.print("[bold yellow][!] Đăng ký tài khoản mới.[/bold yellow]")
-                acc2_email = prompt_valid_value("[bold yellow][?] Email tài khoản[/bold yellow]", "Email", password=False)
-                acc2_password = prompt_valid_value("[bold yellow][?] Mật khẩu tài khoản[/bold yellow]", "Password", password=False)
+                acc2_email = prompt_valid_value("[bold yellow][?] Email tài khoản[/bold yellow]", "[bold blue]Email[/bold blue]", password=False)
+                acc2_password = prompt_valid_value("[bold yellow][?] Mật khẩu tài khoản[/bold yellow]", "[bold blue]Password[/bold blue]", password=False)
                 console.print("[bold blue][%] Đang tạo tài khoản mới [/bold blue]: ", end=None)
                 status = cpm.register(acc2_email, acc2_password)
                 if status == 0:
@@ -513,8 +513,8 @@ if __name__ == "__main__":
                     continue
             elif service == 22: # Clone Account
                 console.print("[bold yellow][?] Vui lòng nhập chi tiết tài khoản[/bold yellow]:")
-                to_email = prompt_valid_value("[bold yellow][?] Email tài khoản[/bold yellow]", "Email", password=False)
-                to_password = prompt_valid_value("[bold yellow][?] Mật khẩu tài khoản[/bold yellow]", "Password", password=False)
+                to_email = prompt_valid_value("[bold yellow][?] Email tài khoản[/bold yellow]", "[bold blue]Email[/bold blue]", password=False)
+                to_password = prompt_valid_value("[bold yellow][?] Mật khẩu tài khoản[/bold yellow]", "[bold blue]Password[/bold blue]", password=False)
                 console.print("[bold cyan][%] Đang sao chép tài khoản của bạn[/bold cyan]: ", end=None)
                 if cpm.account_clone(to_email, to_password):
                     console.print("[bold green]Đã thành công.[/bold green]")
