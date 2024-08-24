@@ -163,7 +163,7 @@ if __name__ == "__main__":
             console.print("[bold yellow](21):[/bold yellow][bold green] Chỉnh sửa đua thua.[/bold green]")
             console.print("[bold yellow](22):[/bold yellow][bold green] Sao chép tài khoản.[/bold green]")
             console.print("[bold yellow](0) :[/bold yellow][bold yellow] Đăng xuất tài khoản.[/bold yellow]", end="\n\n")
-            service = IntPrompt.ask(f"[bold blue] Chọn một dịch vụ [/bold blue][bold red][1 => {choices[-1]} hoặc 0][/bold red]", choices=choices, show_choices=False)
+            service = IntPrompt.ask(f"[bold #00dcff] Chọn một dịch vụ [/bold #00dcff][bold red][1 => {choices[-1]} hoặc 0][/bold red]", choices=choices, show_choices=False)
             if service == 0: # Exit
                 console.print(f"[bold blue]Cảm ơn bạn đã sử dụng tool của tôi[/bold blue][bold yellow]《 Telegram: @{__CHANNEL_USERNAME__} 》[/bold yellow]")
             elif service == 1: # Increase Money
