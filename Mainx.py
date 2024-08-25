@@ -191,7 +191,7 @@ if __name__ == "__main__":
                 console.print("[bold yellow][!] Nhập số xu bạn muốn.[/bold yellow]")
                 amount = IntPrompt.ask("[bold yellow] Số lượng[/bold yellow]")
                 console.print("[bold #00dcff][%] Đang lưu dữ liệu[/bold #00dcff]: ", end=None)
-                if amount > 0 and amount <= 90000:
+                if amount > 0 and amount <= 500000:
                     if cpm.set_player_coins(amount):
                         console.print("[bold green]Đã thành công[/bold green]")
                         console.print("[bold green]==================================[/bold green]")
