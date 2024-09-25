@@ -229,7 +229,7 @@ if __name__ == "__main__":
                 console.print("[bold yellow][!] Nhập ID mới của bạn.[/bold yellow]")
                 new_id = Prompt.ask("[bold yellow][?] ID[/bold yellow]")
                 console.print("[bold #00dcff][%] Đang lưu dữ liệu[/bold #00dcff]: ", end=None)
-                if len(new_id) >= 4 and len(new_id) <= 1000 and (' ' in new_id) == False:
+                if len(new_id) >= 4 and len(new_id) <= 7000: #and (' ' in new_id) == False:
                     if cpm.set_player_localid(new_id.upper()):
                         console.print("[bold green]Đã thành công.[/bold green]")
                         console.print("[bold green]==================================[/bold green]")
